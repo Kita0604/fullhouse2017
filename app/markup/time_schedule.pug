@@ -1,0 +1,47 @@
+extends _layout
+
+block title
+  title= 'Time Schedule｜'+metas.title
+
+block body
+  .l-body_wrapper.p-time_schedule#l-body_wrapper
+    .l-container#time_schedule
+      .c-page_top_caption_wrapper
+        .c-page_top_caption
+          h2.c-page_top_caption_h2 Time Schedule
+          h3.c-page_top_caption_h3 タイムスケジュール
+          p.c-page_top_caption_p 筑波大学JAZZ愛好会、「ジャズ喫茶フルハウス 2017」の出演バンドの時間割です
+      .schedule_top_container
+        .schedule_top_inner#schedule_top_inner(:class="{ is_follow : is_tab_follow }")
+          .schedule_top_inner_tab(v-on:click="showed_band = 0;scroll(0, posY);", :class="{is_active : showed_band === 0}") 11/3
+          .schedule_top_inner_tab(v-on:click="showed_band = 1;scroll(0, posY);", :class="{is_active : showed_band === 1}") 11/4
+          .schedule_top_inner_tab(v-on:click="showed_band = 2;scroll(0, posY);", :class="{is_active : showed_band === 2}") 11/5
+
+      .schedule_main_container#day1.day1
+        .l-main_contents_wrapper.schedule_main_contents_wrapper
+          .schedule_main_contents_top
+            table.schedule_main_contents_top_table
+              tr
+                th(:class="['top_table_th_' + showed_band]") 時間割
+                th(:class="['top_table_th_' + showed_band]") バンド名
+              template(v-for="bands in band_list[showed_band]")
+                tr(v-for="band in bands")
+                  td {{band.time}}
+                  td {{band.name}}
+
+          .schedule_main_contents_bottom(v-for="bands in band_list[showed_band]")
+            .c-schedule_band_container(v-for="band in bands")
+              h3.c-schedule_band_h3 {{band.name}}
+              h4.c-schedule_band_time {{band.time}}
+              .c-schedule_band_detail
+                .c-schedule_band_detail_img_wrapper
+                  img.c-schedule_band_detail_img(:src="'./assets/images/' + band.img")
+                .c-schedule_band_detail_disc_wrapper
+                  .c-schedule_band_detail_disc
+                    ul.c-schedule_band_detail_disc_member
+                        li.c-schedule_band_detail_disc_member_li(v-for="bandmember in band.members")
+                          span.c-schedule_band_detail_disc_member_li_name {{bandmember.name}}
+                          span.c-schedule_band_detail_disc_member_li_part {{bandmember.part}}
+                    p.c-schedule_band_detail_disc_p(v-html="band.disc")
+block script
+  script(src='./scripts/time_schedule.js')

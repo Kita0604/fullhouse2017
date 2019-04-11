@@ -1,0 +1,54 @@
+.c-schedule_band_container
+  // background: white;
+  // margin: 24px 10px;
+  // border-radius: 4px;
+  // padding: 30px 0px;
+  // box-shadow: 0px 0px 8px -2px #b5b5b5;
+  @media $smtphn
+    font-size 15px
+  &+&
+    padding-top 50px
+  .c-schedule_band_h3
+    text-align center
+    padding-bottom 5px
+    font-weight 700
+    font-size 24px
+    letter-spacing .05em
+  .c-schedule_band_time
+    text-align center
+    font-size 14px
+    font-weight bold
+    color #969595
+  .c-schedule_band_detail
+    padding-top 30px
+    display flex
+    @media $mobile
+      display block
+    &_img_wrapper,&_disc_wrapper
+      width 100%
+    &_img_wrapper
+      text-align center
+      padding-right 10px
+    &_disc_wrapper
+      padding-left 10px
+      @media $mobile
+        max-width 500px
+        margin 0 auto
+    &_img
+      width 100%
+      max-width 300px
+      border 5px solid #fff;
+      box-shadow 1px 1px 7px 2px rgba(0,0,0,.1)
+    &_disc
+      &_member
+        margin 0
+        padding 20px 0px
+      &_member_li
+        padding 5px 20px 5px 0px
+        display inline-block
+        &_name
+          padding-right 10px
+      &_p
+        line-height 1.8em
+        letter-spacing 0.005em
+    

@@ -1,0 +1,98 @@
+extends _layout
+
+block title
+  title= 'Top Page｜'+metas.title
+
+block body
+  .l-body_wrapper.p-index#l-body_wrapper
+    .l-container
+      .home_top_container
+        img.home_top_container_img(src='./assets/images/topimg.jpg' alt="FULLHOUSE2017 筑波大学JAZZ愛好会 フルハウス2017")
+        .home_top_container_textblock
+          h2.home_top_container_textblock_h2 FULLHOUSE 2017
+          .home_top_container_textblock_days
+            ul
+              li 11/3(金) 16:00〜19:00 ※前夜祭のため食事なし
+              li 11/4(土) 10:00〜19:00
+              li 11/5(日) 10:00〜16:00
+          .home_top_container_textblock_link
+            a(href="time_schedule.html") Jazz演奏のタイムスケジュールはこちら
+
+      .home_main_container
+        .home_main_block.u-bg_white
+          .l-main_contents_wrapper
+            h2 学園祭で唯一のJAZZ喫茶FULLHOUSE
+            .home_main_contents.home_main_contents_intro
+              .home_main_contents_intro_top
+                img(src='./assets/images/fullhouse_image.jpg' alt="FULLHOUSE2017 筑波大学JAZZ愛好会 フルハウス2017")
+                p 
+                  |今年も、筑波大学JAZZ愛好会による生演奏を行います。
+                  br
+                  |FULLHOUSEではJAZZはもちろんのこと、軽食も楽しむことができます。
+                  br
+                  |スタッフが試食を重ねた至極の一品をご用意致しました。
+                  br
+                  |ロマンティックな店内の雰囲気に合った、
+                  br
+                  |お洒落ながらも熱い演奏を致します。どうぞご来店ください。
+              .home_main_contents_intro_bottom
+                a(href="time_schedule.html").c-button_base.b06_3d_swap.link_button_jazz お洒落なJazz演奏
+                a(href="foods_menu.html").c-button_base.b06_3d_swap.link_button_foods 美味しい軽食
+        .home_main_block.u-bg_gray
+          .l-main_contents_wrapper
+            h2 日時
+            .home_main_contents.home_main_contents_days
+              .home_main_contents_days_top
+                .home_main_contents_days_top_imgwrapper
+                  img(src='./assets/images/days_1.jpg' alt="筑波大学JAZZ愛好会 フルハウス2017 1日目")
+                  img(src='./assets/images/days_2.jpg' alt="筑波大学JAZZ愛好会 フルハウス2017 2日目")
+                  img(src='./assets/images/days_3.jpg' alt="筑波大学JAZZ愛好会 フルハウス2017 3日目")
+                p 
+                  |※11/3(金) につきましては前夜祭のため、JAZZ演奏のみを行います。
+                  br
+                  |フードメニューはご注文頂けませんので、ご了承ください。
+                  br
+                  |また、前夜祭は食品類を持ち込んでいただいて構いません。
+              .home_main_contents_days_bottom
+                a(href="time_schedule.html") Jazz演奏のタイムスケジュールはこちら
+        .home_main_block.u-bg_white
+          .l-main_contents_wrapper#access
+            h2 アクセス
+            .home_main_contents.home_main_contents_access
+              .home_main_contents_access_top
+                p 
+                  |開店場所は、筑波大学5C317(5C棟3階)となります。
+                  br
+                  |周辺で呼び込みをしておりますので、気軽にお声がけください。
+              .home_main_contents_access_bottom
+                .c-iframe-container.home_main_contents_access_map_wrapper 
+                  iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2941.0725384341813!2d140.10094052007273!3d36.103399002701586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60220c085bb2a08b%3A0xa0836db80d81cf82!2z44CSMzA1LTAwMDUg6Iyo5Z-O55yM44Gk44GP44Gw5biC5aSp5LmF5L-d77yT5LiB55uu77yRIOS9k-iCsuODu-iKuOihk-WwgumWgOWtpue-pOS9k-iKuOS4reWkruajnw!5e0!3m2!1sja!2sjp!4v1507591541486" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
+                img.home_main_contents_access_map_img(src='./assets/images/access_map.jpg')
+        .home_main_block.u-bg_gray
+          .l-main_contents_wrapper
+            h2 Ustream 配信
+            .home_main_contents.home_main_contents_ustream
+              .home_main_contents_ustream_top
+                p 
+                  |FULLHOUSEは、Ustreamにてリアルタイム配信が行われます。
+                  br
+                  |都合が合わず、会場に来られないなどといった方は、
+                  br
+                  |ぜひUstreamへアクセスしていただき、オンラインでお楽しみください。
+                  br
+                  |また、Ustreamの映像は、FULLHOUSE終了後にも閲覧が可能ですので、
+                  br
+                  |いつでもご気軽にお楽しみいただくことができます。
+              .home_main_contents_ustream_bottom
+                a(href="http://www.ustream.tv/channel/fullhouse2014-5c316") 
+                  span.btn_text Ustream 配信ページはこちら
+        .home_main_block.u-bg_white
+          .l-main_contents_wrapper
+            h2 JAZZ愛好会公式twitter
+            .home_main_contents.home_main_contents_twitter
+              .home_main_contents_twitter_top
+                p 
+                  |最新の情報を共有します。
+              .home_main_contents_twitter_bottom
+                a(class="twitter-timeline" data-height="1000" href="https://twitter.com/jazzken_tsukuba?ref_src=twsrc%5Etfw") Tweets by jazzken_tsukuba
+                script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")

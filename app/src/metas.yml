@@ -1,0 +1,15 @@
+#末尾の/を含めたurl
+url: '//www.stb.tsukuba.ac.jp/~jazz/fullhouse/2017/'
+
+#meta情報
+title: 'FULLHOUSE2017 筑波大学JAZZ愛好会 フルハウス'
+description: '筑波大学所属公式サークル、筑波大学JAZZ愛好会が雙峰祭で出店するジャズ喫茶、FULLHOUSE2017の特設ホームページです。'
+keywords: 'FULLHOUSE,FULLHOUSE2017,フルハウス,フルハウス2017,jazz,ジャズ,筑波大学,ジャズ愛好会,jazz愛好会,ジャズ喫茶,jazz喫茶,雙峰祭'
+viewport: 'width=device-width,initial-scale=1.0,user-scalable=no'
+
+#ogp
+ogp:
+  type: 'website'
+  image: 'assets/images/ogp.png'
+  image_jpg: 'assets/images/ogp.jpg'
+  site_name: 'FULLHOUSE2017'

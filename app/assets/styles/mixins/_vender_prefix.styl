@@ -1,0 +1,79 @@
+radius(rad = 2px)
+  border-radius rad
+  -webkit-border-radius rad
+  -o-border-radius rad
+  -ms-border-radius rad
+  -moz-border-radius rad
+
+transform(args...)
+  -webkit-transform args
+  -moz-transform args
+  -ms-transform args
+  -o-transform args
+  transform args
+
+ease(p = all, sec = .3s, e = ease)
+  --webkit-transition p sec e
+  -moz-transition p sec e
+  -ms-transition p sec e
+  -o-transition p sec e
+  transition p sec e
+
+transition(args...)
+  --webkit-transition args
+  -moz-transition args
+  -ms-transition args
+  -o-transition args
+  transition args
+
+flex()
+  display -webkit-box /*Android4.3*/
+  display -moz-box    /*Firefox21*/
+  display -ms-flexbox /*IE10*/
+  display -webkit-flex /*PC-Safari,iOS8.4*/
+  display flex
+
+flex_spacebetween()
+  -webkit-box-pack space-between /*Android4.3*/
+  -moz-box-pack space-between    /*Firefox21*/
+  -ms-flex-pack space-between    /*IE10*/
+  -webkit-justify-content space-between /*PC-Safari,iOS8.4*/
+  justify-content space-between
+  
+flex_center()
+  -webkit-box-pack center /*Android4.3*/
+  -moz-box-pack center    /*Firefox21*/
+  -ms-flex-pack center    /*IE10*/
+  -webkit-justify-content center /*PC-Safari,iOS8.4*/
+  justify-content center
+//Android 2.*向け
+// box-sizing(p = border-box)
+//   box-sizing p
+//   -webkit-box-sizing p
+
+
+stitches-sprite(x=0, y=0, width=0, height=0, sheet_width=0, sheet_height=0, slightly_smaller=false)
+  //テキストを隠す
+  white-space nowrap
+  text-indent 100%
+  overflow hidden
+  font-size 0
+  line-height 0
+  //小数分でぴったり行かず、はみ出る場合があるので一回り小さくする(数%減らす)
+  if slightly_smaller
+    $small_param = 97
+    background-size (sheet_width / width * $small_param)% (sheet_height / height * $small_param)%
+    //要素の幅によってスプライトの表示サイズを可変にする
+    //要素の幅によってスプライトの表示サイズを可変にする
+    //比で位置を決めるが、この時の位置は左上
+    //中央に寄せるため、表示
+    background-position ((x - width*0.01*(( 100 - $small_param)/2) )/ (sheet_width - width) * 100)% ((y - height*0.01*(( 100 - $small_param)/2) ) / (sheet_height - height) * 100)%
+  else
+    background-size (sheet_width / width * 100)% (sheet_height / height * 100)%
+    background-position (x / (sheet_width - width) * 100)% (y / (sheet_height - height) * 100)%
+  // 画像のアスペクト比固定
+  &::after
+    content ''
+    display block
+    padding-top (height / width * 100)%
+

@@ -1,0 +1,30 @@
+.p-staff
+  .staff_main_container
+    background-color #eeeeee
+    background-image url('../images/bg_jazz_yellow.png')
+    background-repeat repeat
+    position relative
+    padding-bottom 20px
+    &::before
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-color: rgba(255,255,255,.93);
+  .staff_table
+    max-width 400px
+    width 90%
+    margin 0 auto
+    text-align left
+    &_th
+      padding 10px 0px
+      font-weight bold
+      padding 10px 0 10px 15px
+    &_tr
+      height 45px
+      border-bottom 1px dashed #efefef
+    &_td
+      text-align center
+      color #3e3e3e

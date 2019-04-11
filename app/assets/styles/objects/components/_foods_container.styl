@@ -1,0 +1,180 @@
+.c-foods_container_big
+  display flex
+  width 100%
+  padding-bottom 40px
+  mincho()
+  @media $smtphn
+    display none
+  &_imgwrapper
+    img
+      border 5px solid white
+      box-shadow 1px 1px 7px 2px rgba(0,0,0,.1)
+      max-width 390px
+      width 100%
+  &_discwrapper
+      width 79%
+      padding-left 5%
+    // width 80%
+    // padding-left 50px
+  &_top_disc
+    padding 10px 0px
+    .c-foods_disc_h3
+      font-size 21px
+      border-bottom 1px solid #5b0007
+      font-weight bold
+      box-shadow 0px 1px 0px 0px rgba(91, 0, 6, 0.07)
+      padding-bottom 5px
+  &_middle_disc
+    padding-bottom 10px
+    text-align right
+    .c-foods_disc_drink
+      background-color #5b0007
+      padding 4px
+      font-size 12px
+      font-weight bold
+      display inline-block
+      border-radius 5px
+      color white
+    .c-foods_disc_price
+      font-size 30px
+      display inline-block
+      font-weight bold
+      vertical-align bottom
+      line-height 1em
+      padding 0 16px 0 13px
+
+  &_bottom_disc
+    .c-foods_disc_p 
+      font-size 15px
+      letter-spacing 0.01em
+      line-height 1.5em
+      color #484848
+
+.c-foods_container_big2_wrapper
+  display flex
+  @media $smtphn
+    display block
+.c-foods_container_big2
+  position relative
+  mincho()
+  max-width 500px
+  margin 0 auto
+  &:first-child
+    margin-right 2%
+    @media $smtphn
+      margin-right auto
+  &:last-child
+    margin-left 2%
+    @media $smtphn
+      margin-left auto
+  &+&
+    @media $smtphn
+      margin-top 20px
+  &_imgwrapper
+    img
+      border 5px solid white
+      box-shadow 1px 1px 7px 2px rgba(0,0,0,.1)
+      width 100%
+  &_discwrapper
+    padding 10px 0px 10px 25px
+    position absolute
+    color white
+    bottom 0
+    width 100%
+    box-sizing border-box
+    border 5px solid white
+    border-top none
+    background rgba(0, 0, 0, 0.47)
+  &_top_disc
+    padding 0 0 3px 0
+    .c-foods_disc_h3
+      font-size 19px
+      border-bottom 2px solid rgb(91, 7, 6)
+      font-weight 700
+      box-shadow 0 1px 0 0 rgba(86, 86, 86, 0.14)
+      padding-bottom 1px
+      @media $smtphn_small
+        font-size 16px
+  &_middle_disc
+    //padding-bottom 5px
+    text-align right
+    .c-foods_disc_drink
+      background-color #5b0007
+      padding 4px
+      font-size 12px
+      font-weight bold
+      display inline-block
+      border-radius 5px
+      color white
+      @media $smtphn
+        font-size 11px
+        padding 3px 
+    .c-foods_disc_price
+      font-size 25px
+      display inline-block
+      font-weight bold
+      vertical-align bottom
+      line-height 1em
+      padding 0 16px 0 13px
+      @media $smtphn
+        padding 0 10px 0 6px
+      @media $smtphn_small
+        font-size 22px
+
+  &_bottom_disc
+    .c-foods_disc_p 
+      font-size 14px
+      padding-bottom 10px
+      margin-top -13px
+      letter-spacing 0.01em
+      line-height 1.5em
+      @media $smtphn
+        padding-top 15px
+        margin-top -9px
+        padding-bottom 5px
+      @media $smtphn_small
+        font-size 13px
+        padding-bottom 3px
+
+
+ 
+.c-foods_container_small
+  $disc_price_fontsize = 20px
+  width 100%
+  mincho()
+  &_imgwrapper
+    img
+      width 100%
+      border 5px solid #ffffff
+      box-shadow 1px 1px 3px 0px rgba(128, 128, 128, 0.28)
+  &_discwrapper
+    padding 22px 10px 10px 10px
+  &_top_disc
+    box-shadow 0 1px 0 0 rgba(86, 86, 86, 0.14)
+    border-bottom 1px solid rgb(91, 7, 6)
+    position relative
+    padding-bottom 2px
+    .c-foods_disc_h3,.c-foods_disc_price
+      display inline-block
+      font-weight bold
+      vertical-align bottom
+      padding-bottom 5px
+    .c-foods_disc_h3
+      font-size 17px
+      line-height $disc_price_fontsize
+    .c-foods_disc_price
+      font-size $disc_price_fontsize
+      line-height 1em
+      position absolute
+      right 0
+  &_middle_disc
+    padding 4px 0 6px 0
+    text-align right
+    font-size 11px
+    color #5b0706
+  &_bottom_disc
+    .c-foods_disc_p 
+      font-size 14px
+      letter-spacing 0.01em
+      line-height 1.5em
+      color #484848

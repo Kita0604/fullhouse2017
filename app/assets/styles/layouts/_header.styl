@@ -1,0 +1,191 @@
+.l-header
+  $l-header_height = 60px
+  $header_contents_padding = 23px
+  $header_right_contents_padding = 24px
+  padding-bottom $l-header_height
+  .header_wrapper
+    position fixed
+    overflow hidden
+    top 0
+    height $l-header_height
+    transition .3s all ease
+    background-color rgba(1, 42, 68, 0.87)
+    box-shadow 0px -7px 43px 0px rgba(21, 21, 21, 0.52) inset
+    z-index 2
+    color white
+    //border-top 1px solid white
+    //box-shadow 0 -45px 10px 42px #000
+    width 100%
+    @media $mobile
+      overflow visible
+    &::before
+      content ''
+      position absolute
+      bottom 0
+      left 0
+      z-index -1
+      width 100%
+      background-color #000
+      height 50%
+      opacity 0
+      ease()
+    &::after
+      content ''
+      position absolute
+      width 100%
+      height 100%
+      top -100%
+      left 0
+      z-index -1
+      box-shadow 0 -101px 99px 146px rgba(125, 125, 125, 0.72)
+  .header_group
+    display inline-block
+    vertical-align middle
+    line-height $l-header_height
+    height $l-header_height
+  .header_contents
+    position relative
+    max-width $main_colum_width
+    box-sizing border-box
+    width auto
+    margin 0 auto
+    padding 0px 10px
+    height 100%
+    
+    //overflow hidden
+    //padding 0 $header_contents_padding
+    // &::before
+    //   content ''
+    //   position absolute
+    //   width 100%
+    //   height 100%
+    //   top -100%
+    //   left 0
+    //   z-index -1
+    //   box-shadow 0 -101px 99px 146px rgba(255, 255, 255, 0.85)
+    &::before
+      content ''
+      line-height 50px
+      vertical-align middle
+  .header_logo
+    font-size 18px
+    padding 0px 20px
+    text-align center
+    width 214px
+    box-sizing border-box
+    //background-color rgba(21, 85, 111, 0.33)
+    font-family: 'Belleza', sans-serif
+    a
+      color white
+    img
+      width 100%
+  .header_nav
+    li
+      display inline-block
+      padding 0px 15px
+      box-sizing border-box
+      &.smp_nav
+        display none
+      a
+        color white
+        font-weight bold
+        display block
+        width 100%
+        height 100%
+        font-size 14px
+        position relative
+        opacity 1
+        transition all ease 0.5s
+        &:hover
+          opacity 0.7
+      .header_nav_icon
+        display none
+  .header_smp
+    display none
+  @media $mobile
+    .header_contents
+      padding 0px
+    .nav
+      $nav_height = 38px
+      width 100%
+      padding-top $l-header_height
+      opacity 0
+      top -100vw
+      left 0
+      transition all ease 0.3s 
+      box-sizing border-box
+      position absolute
+      text-align left
+      line-height $nav_height
+      z-index -1
+      &.is_selected
+        display block
+        top 0
+        opacity 1
+      ul
+        padding 0
+      li
+        display block
+        // background -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(255, 255, 255)), color-stop(0.88, rgb(207, 207, 207)))
+        // border-bottom 1px solid rgba(0, 0, 0, 0.36)
+        // background rgba(140, 140, 140, 0.44)
+        border-bottom: 1px solid rgba(33, 33, 33, 0.22);
+        background: rgba(84, 84, 84, 0.87);
+    &.is_menu_opened
+      background-color rgba(255, 255, 255, 0.85)
+      box-shadow 0px 0px 2px 1px rgba(0,0,0,0.1)
+      .header_contents
+        .header_group.header_subheading
+          left 87px
+          @media $smtphn
+            left 80px
+          @media $smtphn_small
+            left 73px
+        .logo
+          .header_logo_big
+            .img
+              width 0
+              opacity 0
+          .header_logo_small
+            .img
+              width $l-header_height
+              opacity 1
+    .header_smp
+      display inline-block
+      position absolute
+      right 0
+      .header_btn
+        display inline-block
+        width 60px
+        height 60px
+        color white
+        //border-radius 5px
+        font-weight bold
+        //background-color rgba(53, 102, 128, 0.38)
+        box-sizing border-box
+        font-size 8px
+        text-align center
+        cursor pointer
+        transition(background-color ease 0.3s)
+        .text
+          display inline-block
+          width 100%
+        &.is_menu_opened
+          background-color rgba(35, 50, 58, 0.38)
+        &::before
+          display inline-block
+          font-family FontAwesome
+          font-weight normal
+          display inline-block
+      .header_menu_btn
+        &::before
+          content '\f0c9'
+          font-family "FontAwesome"
+          line-height 34px
+          font-size 28px
+          padding-top 5px
+  .header_link_twitter
+    &::before
+      content '\f099'
+      font-family "FontAwesome"
+      padding-right 5px

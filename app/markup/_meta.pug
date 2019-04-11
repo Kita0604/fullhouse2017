@@ -1,0 +1,25 @@
+//- metaタグの整形
+mixin meta(property, content)
+  if property.match(/^og:/)
+    meta(property=property, content=content)
+  else
+    meta(name=property, content=content)
+
+//- 出力するmeta情報一覧
+mixin metas()
+  +meta('viewport', metas.viewport)
+  +meta('description', metas.description)
+  +meta('keywords', metas.keywords)
+  +meta('og:title', metas.title)
+  +meta('og:type', metas.type)
+  +meta('og:url', metas.url)
+  +meta('og:image', metas.url+metas.ogp.image)
+  +meta('og:site_name', metas.ogp.site_name)
+  +meta('og:description', metas.description)
+  +meta('twitter:card', 'summary_large_image')
+  +meta('twitter:image:src' ,'http:'+metas.url+metas.ogp.image_jpg)
+  +meta('twitter:url',metas.url)
+  +meta("twitter:description", metas.description)
+  +meta('twitter:site' ,'@jazzken_tsukuba')
+  +meta('twitter:creator' ,'@jazzken_tsukuba')
+  +meta('twitter:domain' ,metas.url)

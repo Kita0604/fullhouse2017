@@ -1,0 +1,43 @@
+include _meta
+
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    //base(href=(basePath ? basePath : '/'))
+    +metas
+    link(rel="stylesheet", href="./assets/styles/app.css")
+    link(href="//fonts.googleapis.com/css?family=Belleza" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
+    link(rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")
+
+    block title
+      title= metas.title
+  body
+    .l-body_wrapper_smp#body_wrapper_smp
+    block header
+      header.l-header#header
+        .header_wrapper
+          .header_contents
+            h1.header_group.header_logo#header_logo
+              a(href="index.html").header_logo_big
+                img(src="./assets/images/header_logo.png", alt="FULLHOUSE2017 筑波大学Jazz愛好会 フルハウス2017")
+            nav.header_group.nav.header_nav#header_nav
+              ul
+                li: a(href="index.html") ホーム
+                li: a(href="time_schedule.html") タイムスケジュール
+                li: a(href="foods_menu.html") フードメニュー
+                li: a(href="staff.html") スタッフ
+                li: a(href="index.html#access") アクセス
+                li: a.header_link_twitter(href="//twitter.com/jazzken_tsukuba" target="_blank") twitter
+            .header_smp
+              .header_menu_btn.header_btn#menu_btn: span.text メニュー
+
+    block body
+    block footer
+      footer.l-footer#l-footer Copyright © 2017 Jazz Society of Tsukuba University ALL RIGHTS RESERVED.
+    script(src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+    script(src="//cdn.jsdelivr.net/npm/vue")
+    script(src="//use.fontawesome.com/c099e9a850.js" async="true")
+    script(src='./scripts/main.js')
+    block script

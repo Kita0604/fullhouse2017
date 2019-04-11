@@ -1,0 +1,158 @@
+extends _layout
+
+block title
+  title= 'Foods Menu｜'+metas.title
+
+block body
+  .l-body_wrapper.p-foods_menu#l-body_wrapper
+    .l-container
+      .c-page_top_caption_wrapper
+        .c-page_top_caption
+          h2.c-page_top_caption_h2 Foods Menu
+          h3.c-page_top_caption_h3 軽食メニュー
+          p.c-page_top_caption_p 筑波大学JAZZ愛好会、「ジャズ喫茶フルハウス 2017」で提供する軽食メニューです。
+      .foods_main_container
+        .l-main_contents_wrapper_page
+        .l-main_contents_wrapper
+          h2.l-main_contents_h2.foods_main_contents_h2 FOODS
+          .foods_menu_container.c-foods_container_big2_wrapper
+            .c-foods_container_big2
+              .c-foods_container_big2_imgwrapper
+                img(src="./assets/images/pizza_toast.jpg")
+              .c-foods_container_big2_discwrapper
+                .c-foods_container_big2_top_disc
+                  h3.c-foods_disc_h3 グリル野菜のピザトースト
+                .c-foods_container_big2_middle_disc
+                  .c-foods_disc_drink ドリンク付き
+                  .c-foods_disc_price ¥250
+                .c-foods_container_big2_bottom_disc
+                  p.c-foods_disc_p
+                    |香ばしく焼き上げた、
+                    br
+                    |野菜をふんだんに利用したピザトースト
+            .c-foods_container_big2
+              .c-foods_container_big2_imgwrapper
+                img(src="./assets/images/pirahu.jpg")
+              .c-foods_container_big2_discwrapper
+                .c-foods_container_big2_top_disc
+                  h3.c-foods_disc_h3 カレーとバジルのピラフ
+                .c-foods_container_big2_middle_disc
+                  .c-foods_disc_drink ドリンク付き
+                  .c-foods_disc_price ¥350
+                .c-foods_container_big2_bottom_disc
+                  p.c-foods_disc_p
+                    |スパイシーなカレーと
+                    br
+                    |香り立つバジルのハーモニー
+        .l-main_contents_wrapper
+          h2.l-main_contents_h2.foods_main_contents_h2 DEZERTS
+          .foods_menu_container
+            .c-foods_container_big.is_pc
+              .c-foods_container_big_imgwrapper
+                img(src="./assets/images/waffle.jpg")
+              .c-foods_container_big_discwrapper
+                .c-foods_container_big_top_disc
+                  h3.c-foods_disc_h3 ワッフル(ストロベリー or マンゴー)
+                .c-foods_container_big_middle_disc
+                  .c-foods_disc_drink ドリンク付き
+                  .c-foods_disc_price ¥300
+                .c-foods_container_big_bottom_disc
+                  p.c-foods_disc_p ふんわりホイップ＆フルーツソースを添えて
+            .c-foods_container_big2.is_smp
+              .c-foods_container_big2_imgwrapper
+                img(src="./assets/images/waffle.jpg")
+              .c-foods_container_big2_discwrapper
+                .c-foods_container_big2_top_disc
+                  h3.c-foods_disc_h3 ワッフル(ストロベリー or マンゴー)
+                .c-foods_container_big2_middle_disc
+                  .c-foods_disc_drink ドリンク付き
+                  .c-foods_disc_price ¥300
+                .c-foods_container_big2_bottom_disc
+                  p.c-foods_disc_p ふんわりホイップ＆フルーツソースを添えて
+            .c-foods_container_big2.is_smp
+              .c-foods_container_big2_imgwrapper
+                img(src="./assets/images/berry_cake.jpg")
+              .c-foods_container_big2_discwrapper
+                .c-foods_container_big2_top_disc
+                  h3.c-foods_disc_h3 ベリーケーキ
+                .c-foods_container_big2_middle_disc
+                  .c-foods_disc_drink ドリンク付き
+                  .c-foods_disc_price ¥400
+                .c-foods_container_big2_bottom_disc
+                  p.c-foods_disc_p ベリーをふんだんに使った愛らしいパステルカラーのケーキです
+            .c-foods_container_big2.is_smp
+              .c-foods_container_big2_imgwrapper
+                img(src="./assets/images/chocolat_cake.jpg")
+              .c-foods_container_big2_discwrapper
+                .c-foods_container_big2_top_disc
+                  h3.c-foods_disc_h3 ショコラケーキ
+                .c-foods_container_big2_middle_disc
+                  .c-foods_disc_drink ドリンク付き
+                  .c-foods_disc_price ¥400
+                .c-foods_container_big2_bottom_disc
+                  p.c-foods_disc_p キャメルムースとミルクチョコのなめらかな口溶け
+            .c-foods_container_big2.is_smp
+              .c-foods_container_big2_imgwrapper
+                img(src="./assets/images/cheese_cake.jpg")
+              .c-foods_container_big2_discwrapper
+                .c-foods_container_big2_top_disc
+                  h3.c-foods_disc_h3 ベイクドチーズケーキ
+                .c-foods_container_big2_middle_disc
+                  .c-foods_disc_drink ドリンク付き
+                  .c-foods_disc_price ¥400
+                .c-foods_container_big2_bottom_disc
+                  p.c-foods_disc_p 濃厚な味わいが特徴の、ちょっと贅沢なチーズケーキです
+            .foods_container_small_wrapper
+              .c-foods_container_small.is_pc
+                .c-foods_container_small_imgwrapper
+                  img(src="./assets/images/berry_cake.jpg")
+                .c-foods_container_small_discwrapper
+                  .c-foods_container_small_top_disc
+                    h3.c-foods_disc_h3 ベリーケーキ
+                    .c-foods_disc_price ¥400
+                  .c-foods_container_small_middle_disc
+                    .c-foods_disc_drink ドリンク付き
+                  .c-foods_container_small_bottom_disc
+                    p.c-foods_disc_p ベリーをふんだんに使った愛らしいパステルカラーのケーキです
+              .c-foods_container_small.is_pc
+                .c-foods_container_small_imgwrapper
+                  img(src="./assets/images/chocolat_cake.jpg")
+                .c-foods_container_small_discwrapper
+                  .c-foods_container_small_top_disc
+                    h3.c-foods_disc_h3 ショコラケーキ
+                    .c-foods_disc_price ¥400
+                  .c-foods_container_small_middle_disc
+                    .c-foods_disc_drink ドリンク付き
+                  .c-foods_container_small_bottom_disc
+                    p.c-foods_disc_p キャメルムースとミルクチョコのなめらかな口溶け
+              .c-foods_container_small.is_pc
+                .c-foods_container_small_imgwrapper
+                  img(src="./assets/images/cheese_cake.jpg")
+                .c-foods_container_small_discwrapper
+                  .c-foods_container_small_top_disc
+                    h3.c-foods_disc_h3 ベイクドチーズケーキ
+                    .c-foods_disc_price ¥400
+                  .c-foods_container_small_middle_disc
+                    .c-foods_disc_drink ドリンク付き
+                  .c-foods_container_small_bottom_disc
+                    p.c-foods_disc_p 濃厚な味わいが特徴の、ちょっと贅沢なチーズケーキです
+        .l-main_contents_wrapper
+          h2.l-main_contents_h2.foods_main_contents_h2 DRINKS
+          .foods_menu_container
+            ul.drink_menu_list
+              li.drinks_menu
+                span.drinks_menu_name オレンジジュース
+                span.drinks_menu_price ¥100
+              li.drinks_menu
+                span.drinks_menu_name ジンジャエール
+                span.drinks_menu_price ¥100
+              li.drinks_menu
+                span.drinks_menu_name カフェラテ
+                span.drinks_menu_price ¥100
+              li.drinks_menu
+                span.drinks_menu_name コーヒー(アイスorホット)
+                span.drinks_menu_price ¥100
+              li.drinks_menu
+                span.drinks_menu_name 紅茶(アイスorホット)
+                span.drinks_menu_price ¥100
+
